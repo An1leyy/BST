@@ -446,10 +446,7 @@ BinarySearchTree::Iterator BinarySearchTree::Iterator::operator++(int)
 }
 BinarySearchTree::Iterator BinarySearchTree::Iterator::operator--()
 {
-    if (_node == nullptr)
-    {
-        return *this;
-    }
+    if (_node == nullptr) { return *this; }
     if (_node->keyValuePair.first == UINT32_MAX)
     {
         _node = _node->parent;
@@ -517,10 +514,7 @@ BinarySearchTree::ConstIterator BinarySearchTree::ConstIterator::operator++(int)
 }
 BinarySearchTree::ConstIterator BinarySearchTree::ConstIterator::operator--()
 {
-    if (_node == nullptr)
-    {
-        return *this;
-    }
+    if (_node == nullptr) { return *this; }
     if (_node->keyValuePair.first == UINT32_MAX)
     {
         _node = _node->parent;
